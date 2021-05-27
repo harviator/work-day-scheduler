@@ -5,9 +5,18 @@ function displayTime(){
 
 setInterval(displayTime,1000);
 
+// var nineToFive = [
+//     {
+//         block: 0,
+//         hour: 
+
+//     }
+// ]
+
+
 /*
 Notes:
-1. Need to show the date
+1. Need to show the date - Done
 2. Time blocks for 9-5
 3. Evaluate past, present, and future
 4. Colour code past, present, and future
