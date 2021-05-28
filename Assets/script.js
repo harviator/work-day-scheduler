@@ -10,19 +10,20 @@ setInterval(displayTime,1000);
 
 function pastPresentFuture() {
 
-    var time = 12; //moment().format('H');
-    console.log(typeof time);
+    $('.row').each(function() {
+        
+        var time = moment().format('H');
 
-    var block =  $('.row').attr('id');
-    console.log(block);
-
-    if (block == time) {
-        $('row').addClass('present');
-    } else if (block < time) {
-        $('row').addClass('past');
-    } else {
-        $('row').addClass('future');
-    }
+        var block =  $(this).attr('id');
+    
+        if (block == time) {
+            $(this).addClass('present');
+        } else if (block < time) {
+            $(this).addClass('past');
+        } else {
+            $(this).addClass('future');
+        }
+    })
 };
 
 pastPresentFuture();
