@@ -1,11 +1,5 @@
 //Global Variables
 var saveBtn = $('.saveBtn');
-var text = $('textarea');
-console.log(text);
-
-var sched = localStorage.getItem("sched");
-
-text.text() = sched;
 
 //Function to display the day and time
 function displayTime(){
@@ -23,7 +17,8 @@ function pastPresentFuture() {
         var time = moment().format('H');
 
         var block =  $(this).attr('id');
-    
+    console.log(time)
+    console.log(block)
         if (block == time) {
             $(this).addClass('present');
         } else if (block < time) {
@@ -37,12 +32,24 @@ function pastPresentFuture() {
 pastPresentFuture();
 
 //Save text to local storage when save button is clicked
-function saveText(event) {
-    text.text() = sched;
-    localStorage.setItem("sched", sched);
+function saveText() {
+    //with jquery how take the id
+    var hour=$(this).attr('value');
+    console.log(hour)
+  var  sched = $(this).siblings().eq(1).val();
+    localStorage.setItem(hour, sched);
+    
 }
 
-saveBtn.on('click', saveText());
+function Load(event) {
+
+$("#09").children().eq(1).val(localStorage.getItem('09'))
+  
+    
+}
+
+Load()
+saveBtn.on('click', saveText);
 
 /*
 Notes:
