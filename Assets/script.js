@@ -41,6 +41,9 @@ function saveText(event) {
     text.text() = sched;
     localStorage.setItem("sched", sched);
 }
+
+saveBtn.on('click', saveText());
+
 /*
 Notes:
 1. Need to show the date - Done
