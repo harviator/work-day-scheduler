@@ -32,18 +32,26 @@ pastPresentFuture();
 
 //Save text to local storage when save button is clicked
 function saveText() {
-    //with jquery how take the id
+
     var hour = $(this).parents().attr('id');
-    console.log(hour)
-  var  sched = $(this).siblings().eq(1).val();
-    localStorage.setItem(hour, sched);
     
+    var sched = $(this).siblings().eq(1).val();
+    
+    localStorage.setItem(hour, sched);
 }
 
 function Load(event) {
 
-$('sched').children().eq(1).val(localStorage.getItem('hour'));
+    //var hour = $(this);
+    
+    //var sched = $(this).siblings().eq(1).val()
+
+    $('#09').children().eq(1).val(localStorage.getItem('09'));
+
+    console.log(hour);
+    console.log(sched);
   
+    //#09 - is the id... (localStorage.getItem('09')) 09 - is the key...
     
 }
 
