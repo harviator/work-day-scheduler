@@ -17,8 +17,7 @@ function pastPresentFuture() {
         var time = moment().format('H');
 
         var block =  $(this).attr('id');
-    console.log(time)
-    console.log(block)
+    
         if (block == time) {
             $(this).addClass('present');
         } else if (block < time) {
@@ -34,7 +33,7 @@ pastPresentFuture();
 //Save text to local storage when save button is clicked
 function saveText() {
     //with jquery how take the id
-    var hour=$(this).attr('value');
+    var hour = $(this).parents().attr('id');
     console.log(hour)
   var  sched = $(this).siblings().eq(1).val();
     localStorage.setItem(hour, sched);
@@ -43,7 +42,7 @@ function saveText() {
 
 function Load(event) {
 
-$("#09").children().eq(1).val(localStorage.getItem('09'))
+$('sched').children().eq(1).val(localStorage.getItem('hour'));
   
     
 }
