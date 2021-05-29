@@ -39,6 +39,6 @@ THEN the saved events persist
 
 ## Screen Shot
 
-![Getting Started](./Assets/images/sreen-shot.png)
+![Getting Started](./Assets/images/screen-shot.png)
 
 ## Link
