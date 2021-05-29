@@ -41,6 +41,7 @@ function saveText() {
     localStorage.setItem(hour, sched);
 }
 
+//Get text from local storage
 function Load() {
 
     $('#09').children().eq(1).val(localStorage.getItem('09'));
@@ -57,4 +58,3 @@ function Load() {
 
 Load()
 saveBtn.on('click', saveText);
-
